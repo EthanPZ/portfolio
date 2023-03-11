@@ -8,6 +8,7 @@ nav {
   align-items: center;
   background-color: rgba(66, 66, 66, 0.089);
   backdrop-filter: blur(20px);
+  height: 57px;
   z-index: 1;
 }
 
