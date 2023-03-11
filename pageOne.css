@@ -1,0 +1,169 @@
+@import url("./separate css/footer.css");
+@import url("./separate css/main.css");
+@import url("./separate css/nav.css");
+@import url("./separate css/responsive.css");
+
+@keyframes upDownWards {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.5em);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    box-shadow: 0 0 1000px 100px #130068;
+  }
+
+  50% {
+    box-shadow: 0 0 1000px 100px #3f20c9;
+  }
+
+  100% {
+    box-shadow: 0 0 1000px 100px #130068;
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.scroll {
+  transition: all 1s ease-in-out;
+}
+
+.decorated {
+  text-decoration: var(--txt-dec) !important;
+}
+
+.sect1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.sect1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 85px;
+  width: 0;
+  height: 200px;
+  box-shadow: 0 0 1000px 100px #130068;
+  background-color: #130068;
+  border-radius: 100%;
+  z-index: -1;
+  animation: gradient infinite 10s;
+}
+
+.sect1::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 85px;
+  width: 0;
+  height: 200px;
+  box-shadow: 0 0 1000px 20px #130068;
+  background-color: #130068;
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.sect1 h1 {
+  font-size: 2.5em;
+  max-width: 20em;
+  margin: var(--no-margin);
+}
+
+.sect1 p {
+  max-width: 35em;
+}
+
+.sect1 img {
+  margin-left: var(--no-margin);
+  max-width: 35em;
+  animation: upDownWards 2s infinite;
+  animation-timing-function: linear;
+}
+
+.sect1 button {
+  border-radius: 100vw;
+  border: none;
+  padding: 10px 20px;
+  background-color: var(--btn-tp);
+  color: var(--global-txt-color);
+  font-family: var(--font);
+  transition: all 0.3s;
+}
+
+.sect1 button:hover {
+  background-color: var(--btn-tp-hv);
+}
+
+.sect2 {
+  height: 100vh;
+}
+
+.sect2 h1 {
+  font-size: 2.2em;
+  text-align: center;
+}
+
+.grid-skills {
+  display: grid;
+  grid-template-columns: repeat(3, 0.2fr);
+  gap: 25px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.grid-skills > div {
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(169, 169, 169, 0.027);
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.grid-skills h3 {
+  font-size: 1.7em;
+  font-weight: 500;
+  color: darkgray;
+}
+
+.mTopH1 {
+  margin-top: 3em;
+}
+
+.grid-skills > div:hover {
+  background-color: rgba(214, 214, 214, 0.055);
+}
+
+.sect3 {
+  height: 0;
+}
+
+.tab {
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.wrap_resume_contents {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wrap_resume_contents ul {
+  padding-left: 20px;
+}
