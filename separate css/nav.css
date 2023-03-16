@@ -46,17 +46,20 @@ nav button:hover {
   padding: 3px;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.5s linear;
 }
 
 .menuMobile {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
   margin-top: 56px;
   background-color: #4f19e223;
-  padding: 20px;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
   transition: all 0.2s ease-in-out;
 }
 

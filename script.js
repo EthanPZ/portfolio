@@ -52,8 +52,15 @@ nav.addEventListener("mouseout", hoverNav.bind(1));
 menuBtn.addEventListener("click", () => {
   isMenOpened = !isMenOpened;
 
-  if (isMenOpened) menuMobile.style.display = "flex";
-  else menuMobile.style.display = "none";
+  if (isMenOpened) {
+    menuMobile.style.maxHeight = "100%";
+    menuMobile.style.padding = "20px";
+    menuBtn.style.transform = "rotate(360deg)";
+  } else {
+    menuMobile.style.maxHeight = 0;
+    menuMobile.style.padding = 0;
+    menuBtn.style.transform = "rotate(-360deg)";
+  }
 });
 
 menuMobile.addEventListener("click", (e) => {
@@ -62,7 +69,9 @@ menuMobile.addEventListener("click", (e) => {
   siblings.forEach((s) => {
     if (s !== link) {
       isMenOpened = !isMenOpened;
-      menuMobile.style.display = "none";
+      menuMobile.style.maxHeight = 0;
+      menuMobile.style.padding = 0;
+      menuBtn.style.transform = "rotate(-360deg)";
     }
   });
 });
