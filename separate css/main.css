@@ -13,6 +13,20 @@
   --min-width: 100%;
 }
 
+@keyframes spinLoader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -66,4 +80,34 @@ p {
 
 ul {
   padding: 0;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+
+  background-color: var(--website-bg);
+  z-index: 2;
+  transition: all 0.2s ease-in-out;
+}
+
+.loader > div {
+  border-radius: 100%;
+  border: 12px solid white;
+  border-top: 12px solid rgb(70, 30, 218);
+
+  width: fit-content;
+  width: 100px;
+  height: 100px;
+
+  animation: spinLoader 1.2s infinite;
 }

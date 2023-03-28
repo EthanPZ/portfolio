@@ -71,10 +71,11 @@
   .grid-skills {
     display: flex !important;
     flex-direction: column !important;
+    padding-bottom: 50px !important;
   }
 
-  .grid-skills {
-    padding-bottom: 50px !important;
+  .future-skills {
+    overflow: hidden;
   }
 }
 
