@@ -71,11 +71,20 @@
   .grid-skills {
     display: flex !important;
     flex-direction: column !important;
+  }
+
+  .grid-skills:first-of-type:not(.grid-skills ~ .grid-skills) {
     padding-bottom: 50px !important;
   }
 
   .future-skills {
+    position: relative;
     overflow: hidden;
+  }
+
+  .hide-skills {
+    display: flex !important;
+    opacity: 1 !important;
   }
 }
 

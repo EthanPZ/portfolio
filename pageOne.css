@@ -47,6 +47,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   height: 100vh;
 }
 
@@ -55,8 +56,10 @@
   position: absolute;
   top: 0;
   right: 0;
+
   width: 300px;
   height: 300px;
+
   background-color: #130068;
   border-radius: 100%;
   filter: blur(100px);
@@ -76,6 +79,7 @@
 
 .sect1 img {
   margin-left: var(--no-margin);
+  width: 100%;
   max-width: 35em;
   animation: upDownWards 2s infinite;
   animation-timing-function: linear;
@@ -109,6 +113,7 @@
   grid-template-columns: repeat(3, 0.2fr);
   gap: 25px;
   justify-content: center;
+
   margin-top: 20px;
 }
 
@@ -117,8 +122,8 @@
   padding: 20px;
   border-radius: 10px;
   background-color: rgba(169, 169, 169, 0.027);
-  transition: all 0.2s;
   user-select: none;
+  transition: all 0.2s;
 }
 
 .grid-skills h3 {
@@ -140,9 +145,12 @@
   position: absolute;
   left: 0;
   right: 0;
+
   margin: auto;
+
   width: 300px;
   height: 300px;
+
   opacity: 0.7;
   background-color: #130068;
   border-radius: 100%;
@@ -168,4 +176,26 @@
 
 .wrap_resume_contents ul {
   padding-left: 20px;
+}
+
+.hide-skills {
+  position: absolute;
+  bottom: 0;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+
+  background-color: #00020e9a;
+  width: 100%;
+  height: 50%;
+  font-size: 1.2em;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: none !important;
+  border-radius: 10px;
+
+  transition: all 0.2s linear;
 }

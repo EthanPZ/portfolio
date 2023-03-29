@@ -9,8 +9,13 @@ const skillsDivs = document.querySelectorAll(".skill");
 const menuBtn = document.querySelector("#menuBtn");
 const menuMobile = document.querySelector(".menuMobile");
 const btnLinkM = document.querySelectorAll(".btnLinkM");
+const hideSkillsDiv = document.querySelector(".hide-skills");
 
 // Functions
+function toggle(element, opacity, padding, display, maxHeight) {
+  element.style.cssText = `opacity: ${opacity}; display: ${display}; padding: ${padding}; max-height: ${maxHeight};`;
+}
+
 function hoverNav(e) {
   if (e.target.classList.contains("link")) {
     const link = e.target;
@@ -28,7 +33,7 @@ const observer = new IntersectionObserver(
     entry.target.classList.toggle("hidden", !entry.isIntersecting);
 
     if (entry.isIntersecting) entry.target.classList.add("scroll");
-    observer.unobserve(entry.target);
+    // observer.unobserve(entry.target);
   },
   {
     // rootMargin: "100px",
@@ -53,12 +58,10 @@ menuBtn.addEventListener("click", () => {
   isMenOpened = !isMenOpened;
 
   if (isMenOpened) {
-    menuMobile.style.maxHeight = "100%";
-    menuMobile.style.padding = "20px";
+    toggle(menuMobile, undefined, "20px", undefined, "100%");
     menuBtn.style.transform = "rotate(360deg)";
   } else {
-    menuMobile.style.maxHeight = 0;
-    menuMobile.style.padding = 0;
+    toggle(menuMobile, undefined, 0, undefined, 0);
     menuBtn.style.transform = "rotate(-360deg)";
   }
 });
@@ -69,9 +72,16 @@ menuMobile.addEventListener("click", (e) => {
   siblings.forEach((s) => {
     if (s !== link) {
       isMenOpened = !isMenOpened;
-      menuMobile.style.maxHeight = 0;
-      menuMobile.style.padding = 0;
+      toggle(menuMobile, undefined, 0, undefined, 0);
       menuBtn.style.transform = "rotate(-360deg)";
     }
   });
+});
+
+hideSkillsDiv.addEventListener("click", () => {
+  toggle(hideSkillsDiv, "0 !important", undefined);
+  setTimeout(
+    () => toggle(hideSkillsDiv, undefined, undefined, "none !important"),
+    500
+  );
 });
