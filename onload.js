@@ -10,7 +10,7 @@ function loaderOut(opacity, overflow, display) {
   loaderWrapper.style.display = display;
 }
 
-loaderOut(undefined, "visible", "flex");
+loaderOut(undefined, "hidden", "flex");
 
 setTimeout(() => {
   loaderOut(0, "visible");

@@ -6,10 +6,15 @@ const footer = document.querySelector("footer");
 const nav = document.querySelector("nav");
 const prgBars = document.querySelectorAll(".pg");
 const skillsDivs = document.querySelectorAll(".skill");
-const menuBtn = document.querySelector("#menuBtn");
 const menuMobile = document.querySelector(".menuMobile");
+const sect1 = document.querySelector("#sect1");
+const getStartedDiv = document.querySelector(".get-started");
+const cover = document.querySelector(".cover");
+
 const btnLinkM = document.querySelectorAll(".btnLinkM");
 const hideSkillsDiv = document.querySelector(".hide-skills");
+const menuBtn = document.querySelector("#menuBtn");
+const getStartedBtn = document.querySelector(".get-started-btn");
 
 // Functions
 function toggle(element, opacity, padding, display, maxHeight) {
@@ -84,4 +89,14 @@ hideSkillsDiv.addEventListener("click", () => {
     () => toggle(hideSkillsDiv, undefined, undefined, "none !important"),
     500
   );
+});
+
+getStartedBtn.addEventListener("click", () => {
+  toggle(getStartedDiv, 1, undefined, "flex");
+  toggle(cover, 1, undefined, "block");
+});
+
+cover.addEventListener("click", () => {
+  toggle(cover, 0, undefined, "none");
+  toggle(getStartedDiv, 0, undefined, "none");
 });
