@@ -105,7 +105,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -121,11 +121,20 @@
   transition: all 0.4s linear;
 }
 
-.get-started button,
-.get-started a {
+.get-started button {
   border-radius: 10px;
-  width: 100%;
+  border: none;
+  padding: 10px 20px;
+  background-color: var(--btn-tp);
+  color: var(--global-txt-color);
+  font-family: var(--font);
   font-size: 20px;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.get-started a {
+  width: 100%;
 }
 
 .discord-copy-message {
@@ -133,11 +142,14 @@
   top: -70px;
   left: 20px;
 
+  display: none;
+
   background-color: #3315b9;
   border-radius: 5px;
   padding: 10px;
   text-align: center;
   opacity: 0;
+
   transition: all 1s linear;
 }
 
@@ -146,10 +158,13 @@
   right: 0;
   left: 0;
   bottom: -20px;
+
   margin: auto;
   background-color: #3315b9;
+
   width: 20px;
   height: 20px;
+
   transform: rotate(135deg);
   z-index: -2;
 }

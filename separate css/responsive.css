@@ -63,6 +63,10 @@
     margin: 20px 0 !important;
   }
 
+  .discord-copy-message {
+    left: auto !important;
+  }
+
   .sect2 {
     margin-top: 3em !important;
     height: 100% !important;

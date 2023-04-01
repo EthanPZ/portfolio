@@ -43,7 +43,6 @@ const observer = new IntersectionObserver(
     // observer.unobserve(entry.target);
   },
   {
-    // rootMargin: "100px",
     threshold: 0.2,
   }
 );
@@ -98,18 +97,27 @@ getStartedBtn.addEventListener("click", () => {
   toggle(cover, 1, undefined, "block");
 });
 
+let msgOpacity;
+let msgDisplay;
+
 cover.addEventListener("click", () => {
   toggle(cover, 0, undefined, "none");
   toggle(getStartedDiv, 0, undefined, "none");
 
   discordBtn.textContent = "Discord";
   clipboardMsg.style.opacity = 0;
+  clipboardMsg.style.display = "none";
+
+  clearTimeout(msgOpacity);
+  clearTimeout(msgDisplay);
 });
 
 discordBtn.addEventListener("click", (e) => {
   e.target.textContent = "EthanPZ#5880";
   navigator.clipboard.writeText(e.target.textContent);
+  clipboardMsg.style.display = "block";
   clipboardMsg.style.opacity = 1;
 
-  setTimeout(() => (clipboardMsg.style.opacity = 0), 3000);
+  msgOpacity = setTimeout(() => (clipboardMsg.style.opacity = 0), 3000);
+  msgDisplay = setTimeout(() => (clipboardMsg.style.display = "none"), 4000);
 });
