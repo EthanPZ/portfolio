@@ -3,9 +3,11 @@ nav {
   top: 0;
   left: 0;
   right: 0;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   background-color: rgba(66, 66, 66, 0.089);
   backdrop-filter: blur(20px);
   height: 57px;
@@ -15,6 +17,7 @@ nav {
 nav ul {
   display: flex;
   gap: 20px;
+
   list-style: none;
 }
 
@@ -42,6 +45,7 @@ nav button:hover {
 
 #menuBtn {
   display: none;
+
   background-color: rgba(61, 61, 61, 0.349);
   padding: 3px;
   border-radius: 5px;
@@ -54,11 +58,13 @@ nav button:hover {
   top: calc(33 - 12);
   left: 0;
   right: 0;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
+
   margin-top: 56px;
   background-color: #4f19e223;
   padding: 0;

@@ -10,11 +10,13 @@ const menuMobile = document.querySelector(".menuMobile");
 const sect1 = document.querySelector("#sect1");
 const getStartedDiv = document.querySelector(".get-started");
 const cover = document.querySelector(".cover");
+const clipboardMsg = document.querySelector(".discord-copy-message");
 
 const btnLinkM = document.querySelectorAll(".btnLinkM");
 const hideSkillsDiv = document.querySelector(".hide-skills");
 const menuBtn = document.querySelector("#menuBtn");
 const getStartedBtn = document.querySelector(".get-started-btn");
+const discordBtn = document.querySelector("#discordBtn");
 
 // Functions
 function toggle(element, opacity, padding, display, maxHeight) {
@@ -99,4 +101,15 @@ getStartedBtn.addEventListener("click", () => {
 cover.addEventListener("click", () => {
   toggle(cover, 0, undefined, "none");
   toggle(getStartedDiv, 0, undefined, "none");
+
+  discordBtn.textContent = "Discord";
+  clipboardMsg.style.opacity = 0;
+});
+
+discordBtn.addEventListener("click", (e) => {
+  e.target.textContent = "EthanPZ#5880";
+  navigator.clipboard.writeText(e.target.textContent);
+  clipboardMsg.style.opacity = 1;
+
+  setTimeout(() => (clipboardMsg.style.opacity = 0), 3000);
 });
