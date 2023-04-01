@@ -57,6 +57,10 @@ sections.forEach((s) => {
 let isMenOpened = false;
 
 // Event Handlers
+window.addEventListener("scroll", () =>
+  nav.classList.toggle("sticky", window.scrollY > 0)
+);
+
 nav.addEventListener("mouseover", hoverNav.bind(0.5));
 nav.addEventListener("mouseout", hoverNav.bind(1));
 
@@ -65,10 +69,10 @@ menuBtn.addEventListener("click", () => {
 
   if (isMenOpened) {
     toggle(menuMobile, undefined, "20px", undefined, "100%");
-    menuBtn.style.transform = "rotate(360deg)";
+    menuBtn.style.transform = "rotate(90deg)";
   } else {
     toggle(menuMobile, undefined, 0, undefined, 0);
-    menuBtn.style.transform = "rotate(-360deg)";
+    menuBtn.style.transform = "rotate(0deg)";
   }
 });
 

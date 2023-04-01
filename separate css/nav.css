@@ -8,10 +8,10 @@ nav {
   justify-content: space-between;
   align-items: center;
 
-  background-color: rgba(66, 66, 66, 0.089);
-  backdrop-filter: blur(20px);
   height: 57px;
   z-index: 1;
+
+  transition: all 0.2s linear;
 }
 
 nav ul {
@@ -43,6 +43,11 @@ nav button:hover {
   background-color: var(--btn-tp-hv);
 }
 
+.sticky {
+  background-color: rgba(66, 66, 66, 0.089);
+  backdrop-filter: blur(20px);
+}
+
 #menuBtn {
   display: none;
 
@@ -50,7 +55,7 @@ nav button:hover {
   padding: 3px;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.5s linear;
+  transition: all 0.1s linear;
 }
 
 .menuMobile {
