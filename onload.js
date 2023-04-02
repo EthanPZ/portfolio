@@ -17,3 +17,7 @@ setTimeout(() => {
 }, 2000);
 
 setTimeout(() => loaderOut(undefined, undefined, "none"), 2200);
+
+window.addEventListener("load", () => {
+  sect1.scrollIntoView();
+});
