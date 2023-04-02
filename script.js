@@ -122,6 +122,9 @@ discordBtn.addEventListener("click", (e) => {
   clipboardMsg.style.display = "block";
   clipboardMsg.style.opacity = 1;
 
+  clearTimeout(msgOpacity);
+  clearTimeout(msgDisplay);
+
   msgOpacity = setTimeout(() => (clipboardMsg.style.opacity = 0), 3000);
   msgDisplay = setTimeout(() => (clipboardMsg.style.display = "none"), 4000);
 });
