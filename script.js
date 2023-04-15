@@ -99,10 +99,10 @@ hideSkillsDiv.addEventListener("click", () => {
 getStartedBtn.addEventListener("click", () => {
   toggle(getStartedDiv, 1, undefined, "flex");
   toggle(cover, 1, undefined, "block");
+  document.documentElement.style.overflow = "hidden";
 });
 
-let msgOpacity;
-let msgDisplay;
+let msgOpacity, msgDisplay;
 
 cover.addEventListener("click", () => {
   toggle(cover, 0, undefined, "none");
@@ -111,6 +111,7 @@ cover.addEventListener("click", () => {
   discordBtn.textContent = "Discord";
   clipboardMsg.style.opacity = 0;
   clipboardMsg.style.display = "none";
+  document.documentElement.style.overflow = "auto";
 
   clearTimeout(msgOpacity);
   clearTimeout(msgDisplay);
