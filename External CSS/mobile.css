@@ -1,0 +1,56 @@
+@media only screen and (max-width: 1075px) {
+  .sect--1 {
+    height: 100%;
+  }
+
+  .sect--5 {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .next__card {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  header ul {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .sect--2 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sect--2 > div {
+    padding-right: 0 !important;
+  }
+
+  .sect--3 {
+    align-items: normal !important;
+  }
+
+  .sect--5 {
+    flex-direction: column;
+  }
+
+  .next__card {
+    display: none;
+  }
+
+  .my--skills > div,
+  .hobbies > div {
+    flex-direction: column;
+  }
+
+  footer > div {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+}

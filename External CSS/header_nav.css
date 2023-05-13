@@ -1,0 +1,118 @@
+header {
+  position: sticky;
+  top: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: var(--dark-1);
+  z-index: 999;
+}
+
+header ul {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+
+  list-style: none;
+}
+
+header li {
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+header button {
+  background-color: transparent;
+  border: 2px solid var(--dark-4);
+  color: white;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+
+  transition: all 0.1s linear;
+}
+
+header button:hover {
+  background-color: rgba(36, 34, 34, 0.363);
+}
+
+footer {
+  background-color: var(--dark-2);
+  padding: var(--sect-padding) 0;
+  margin-top: var(--sect-spacing);
+}
+
+footer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: var(--max-pg-width);
+  margin: auto;
+  padding: 0 20px;
+}
+
+.socials__div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+}
+
+.social__wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.discord__clipboard {
+  position: absolute;
+  top: -70px;
+  right: 73px;
+
+  background-color: var(--dark-4);
+  padding: 5px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.discord__clipboard div {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+  background-color: var(--dark-4);
+  width: 10px;
+  height: 10px;
+  transform: rotateZ(45deg);
+}
+
+/*////////////////////////////////////////*/
+
+footer img {
+  width: 45px;
+  background-color: var(--dark-3);
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  pointer-events: all;
+
+  transition: all 0.1s linear;
+}
+
+footer img:hover {
+  background-color: var(--dark-5);
+}
+
+footer address {
+  color: var(--pg-clr);
+  font-size: 14px;
+}

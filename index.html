@@ -5,184 +5,209 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale = 1.0"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
-    <meta name="description" content="EthanPZ's Portfolio!" />
-    <meta property="og:image" content="./imgs/img.png" />
-
     <title>EthanPZ's Portfolio</title>
-    <link rel="stylesheet" href="./pageOne.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
 
-    <script defer src="script.js"></script>
-    <script defer src="onload.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <script
+      defer
+      src="https://unpkg.com/typewriter-effect@latest/dist/core.js"
+    ></script>
+    <script defer src="https://unpkg.com/scrollreveal"></script>
+
+    <script defer src="./JS/main.js"></script>
+    <script defer src="./JS/writer.js"></script>
+    <script defer src="./JS/scrollView.js"></script>
+    <script defer src="./JS/carousel.js"></script>
+    <script defer src="./JS/projects.js"></script>
   </head>
   <body>
-    <div class="loader">
-      <div></div>
-      <h3>Sit back & relax!</h3>
-    </div>
-
-    <div class="cover"></div>
-
-    <header>
-      <nav class="space">
-        <h3 class="link">EthanPZ</h3>
-        <div>
-          <ul>
-            <a href="#sect1"><li class="link">Get Started</li></a>
-            <a href="#sect2"><li class="link">Skills</li></a>
-            <a
-              href="https://www.docdroid.net/7ZRNzkP/b3o5p8eql-pdf"
-              target="_blank"
-              ><li class="link">Resume</li></a
-            >
+    <main>
+      <header>
+        <h2>EthanPZ</h2>
+        <nav>
+          <ul class="nav__links">
+            <li class="link" data-scroll="#home">Home</li>
+            <li class="link" data-scroll="#work">My Work</li>
+            <li class="link" data-scroll="#about__me">About Me</li>
+            <button class="link">Resume</button>
           </ul>
-        </div>
+        </nav>
+      </header>
+
+      <section class="sect--1" id="home">
+        <h1 class="whoIAm"></h1>
+        <p>Scroll down now.. Seriously.</p>
+      </section>
+
+      <section class="sect--2" id="about__me">
         <div>
-          <button>
-            <a href="mailto:Ethanperetz000707@gmail.com" target="_blank"
-              ><h4 class="link">Contact Me</h4></a
-            >
-          </button>
+          <div class="about__me">
+            <h1>Now for real, Who am I?</h1>
+            <p>
+              My name is Ethan and I'm located in Israel. I like music, video
+              games and coding.
+              <span style="color: var(--pg-clr)"
+                >(that's pretty noticeable, isn't it? lol)</span
+              >
+            </p>
+          </div>
+
+          <div class="wrap__about-me">
+            <div class="my--skills">
+              <h1>My skills</h1>
+
+              <div>
+                <div>HTML</div>
+                <div>CSS</div>
+                <div>JavaScript</div>
+              </div>
+            </div>
+
+            <div class="hobbies">
+              <h1>Hobbies</h1>
+
+              <div>
+                <div>Music</div>
+                <div>Video Games</div>
+                <div>Coding</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <svg
-          id="menuBtn"
-          width="30"
-          height="30"
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path d="M3 12h18"></path>
-          <path d="M3 6h18"></path>
-          <path d="M3 18h18"></path>
-        </svg>
-      </nav>
 
-      <div class="menuMobile">
-        <a href="#sect1"
-          ><button><h3>Get Started</h3></button></a
-        >
-        <a href="#sect2"
-          ><button><h3>Skills</h3></button></a
-        >
-        <a href="#"
-          ><button>
-            <h3><s>Resume</s></h3>
-          </button></a
-        >
-        <a href="mailto:Ethanperetz000707@gmail.com"
-          ><button><h3>Contact Me</h3></button></a
-        >
-      </div>
-    </header>
+        <section class="sect--3">
+          <div>
+            <h2>Beautiful Design</h2>
+            <p>
+              I put a lot of effort into the design so it will be visually
+              pleasing to you and potentially your visitors.
+            </p>
+          </div>
 
-    <section class="sect1" id="sect1">
-      <div>
-        <h1>Professional Web Developer, Determined And Passionate.</h1>
+          <div>
+            <h2>Experience</h2>
+            <p>
+              I have over 2 years of experience in HTML CSS and almost 1 year in
+              JavaScript. I always try to do better and strive to make something
+              different and special everytime.
+            </p>
+          </div>
+
+          <div>
+            <h2>Liked by others</h2>
+            <p>
+              According to my customers and previous clients, My service and
+              commitment is something that you will barely see in others! I'm
+              available most of the time and am trying to reply as quick as
+              possible to everyone.
+            </p>
+          </div>
+        </section>
+      </section>
+
+      <section class="sect--4">
+        <h1>I make what people love ❤️</h1>
         <p>
-          Have you ever thought about hiring a professional web developer for
-          your idea or project? Well, You found him. Nice to meet you 👋, I'm
-          Ethan and I would love to work on whatever you've got.
+          I take your ideas and turn them
+          <span style="font-weight: 600">to reality</span>. All you really have
+          to do is sit patiently and relax.
         </p>
-        <button class="get-started-btn">Get Started</button>
-      </div>
-      <img src="./imgs/coding.gif" alt="img" />
-    </section>
+      </section>
 
-    <div class="get-started">
-      <div class="discord-copy-message">
-        Copied to clipboard!
-        <div></div>
-      </div>
-      <button id="discordBtn">Discord</button>
-      <a href="mailto:Ethanperetz000707@gmail.com" target="_blank"
-        ><button>Email</button></a
+      <section class="sect--5 fade_in">
+        <h1>
+          What does it take to be a Web Developer
+          <span style="color: var(--pg-clr)">& more...</span>
+        </h1>
+
+        <div class="carousel">
+          <!--prettier-ignore-->
+          <button class="slide-prev"> < </button>
+          <div class="card current__card">
+            <h3>Creativity</h3>
+            <p>
+              Every time you enter a website, let's take for instance
+              youtube.com, You're amazed (or not 😅) by the ease of use, the
+              simplicity and the beautiful UI (User Interface). This shows how
+              as a web designer & a developer it's extremely important to have
+              some creativity, because the UI and the simplicity, it all comes
+              with it. (There's a reason why Google & other companies hire these
+              people), That's why I'm here to create an app for you that will
+              work exactly as I just said.
+            </p>
+          </div>
+
+          <div class="card next__card">
+            <h3>What do i do different than others?</h3>
+            <p>
+              I take your idea, then I take the time to actually plan out how to
+              make such an app so it will be both visually beautiful and fast. I
+              don't charge for fixing bugs & etc'. I reply mostly within 10 min,
+              and I make sure to give you the best experience as a customer.
+            </p>
+          </div>
+
+          <!--prettier-ignore-->
+          <button class="slide-next"> > </button>
+        </div>
+      </section>
+
+      <section class="sect--6" id="work">
+        <h2>My Work</h2>
+        <div class="work__wrapper"></div>
+      </section>
+
+      <section
+        class="sect--7"
+        data-lazy="./Imgs/pexels-bastian-riccardi-6176069.jpg"
       >
-    </div>
+        <h1>With me, You won't have to worry bout' a thing.</h1>
+        <p>I do all the work, and you just have to relax and enjoy the ride.</p>
+      </section>
+    </main>
 
-    <section class="sect2" id="sect2">
-      <h1>Skills</h1>
-      <div class="grid-skills">
-        <div align="center" class="skill">
-          <h3>HTML</h3>
+    <footer>
+      <div>
+        <div class="credits">
+          <h2>EthanPZ</h2>
+          <address><p>Website Made By EthanPZ</p></address>
         </div>
-        <div align="center" class="skill">
-          <h3>CSS</h3>
-        </div>
-        <div align="center" class="skill">
-          <h3>JavaScript</h3>
+
+        <div class="socials__div">
+          <h2>Socials</h2>
+
+          <div class="social__wrapper">
+            <div>
+              <div class="discord__clipboard hidden">
+                <p>Copied to clipboard!</p>
+                <div></div>
+              </div>
+
+              <img
+                src="./Imgs/icons8-discord.svg"
+                alt="discord"
+                class="discord__icon"
+              />
+            </div>
+            <a href="https://twitter.com/EthanPZ3/" target="_blank"
+              ><img src="./Imgs/icons8-twitter.svg" alt="twitter"
+            /></a>
+            <a href="https://github.com/EthanPZ1/" target="_blank"
+              ><img src="./Imgs/icons8-github.svg" alt="github"
+            /></a>
+          </div>
         </div>
       </div>
-
-      <h1 class="mTopH1">Future Skills</h1>
-      <div class="grid-skills future-skills">
-        <div align="center" class="skill">
-          <h3>Tailwind CSS</h3>
-        </div>
-        <div align="center" class="skill">
-          <h3>React JS</h3>
-        </div>
-        <div align="center" class="skill">
-          <h3>React Native</h3>
-        </div>
-
-        <div align="center" class="skill">
-          <h3>TypeScript</h3>
-        </div>
-
-        <div align="center" class="skill">
-          <h3>Node.js</h3>
-        </div>
-
-        <div align="center" class="skill">
-          <h3>Git & Github</h3>
-        </div>
-
-        <div align="center" class="skill">
-          <h3>JQuery</h3>
-        </div>
-
-        <div align="center" class="skill">
-          <h3>Python</h3>
-        </div>
-
-        <div align="center" class="skill">
-          <h3>Next.js</h3>
-        </div>
-
-        <div align="center" class="skill">
-          <h3>Express.js</h3>
-        </div>
-
-        <div align="center" class="skill">
-          <h3>Three.js</h3>
-        </div>
-
-        <div align="center" class="skill">
-          <h3>Databases</h3>
-        </div>
-
-        <div class="hide-skills">
-          <p>Click here to reveal the rest of the skills</p>
-        </div>
-      </div>
-    </section>
-
-    <footer class="space">
-      <h2>EthanPZ</h2>
-      <p>Located in Israel</p>
     </footer>
   </body>
 </html>

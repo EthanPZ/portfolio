@@ -1,0 +1,266 @@
+@import url("./External CSS/main.css");
+@import url("./External CSS/header_nav.css");
+@import url("./External CSS/mobile.css");
+
+.sect--1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  height: 100vh;
+  background-color: transparent;
+
+  margin-top: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.sect--1 > h1 {
+  font-size: 40px;
+  padding-bottom: 200px;
+}
+
+.sect--1 > p {
+  color: var(--pg-clr);
+}
+
+.sect--2 {
+  display: flex;
+  justify-content: stretch;
+  overflow: hidden;
+}
+
+.sect--2 > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  border-radius: 10px;
+  padding-right: 12px;
+
+  width: 100%;
+}
+
+.sect--2 > div > div {
+  border: 5px solid var(--dark-5);
+  border-radius: 10px;
+  flex: 1;
+}
+
+.sect--2 > div > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about__me {
+  padding: 10px;
+}
+
+.about__me p {
+  max-width: 500px;
+  text-align: center;
+}
+
+.wrap__about-me {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  text-align: center;
+  padding: 10px;
+}
+
+.sect--2 h1 {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.my--skills,
+.hobbies {
+  border: 5px solid var(--dark-5);
+  border-radius: 10px;
+  padding: 14px;
+
+  height: 50%;
+}
+
+.my--skills h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.my--skills > div,
+.hobbies > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.my--skills > div > div,
+.hobbies > div > div {
+  border: 5px solid var(--dark-5);
+  border-radius: 10px;
+  padding: 4px 10px 4px 10px;
+}
+
+.sect--3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  margin-top: 0;
+}
+
+.sect--3 div {
+  background-color: #131313;
+  padding: 14px;
+  overflow-y: auto;
+  flex: 1;
+  border-radius: 10px;
+  border: 5px solid var(--dark-5);
+}
+
+.sect--3 div::-webkit-scrollbar {
+  display: none;
+}
+
+.sect--3 p {
+  max-width: 500px;
+}
+
+.sect--3 img {
+  width: 50px;
+  aspect-ratio: 1 / 1;
+}
+
+.sect--4 {
+  overflow-x: hidden;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 20px;
+}
+
+.carousel div {
+  background-color: var(--dark-1);
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 10px;
+  height: 300px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.carousel div::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel h3 {
+  text-align: center;
+}
+
+.carousel p {
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.current__card {
+  transform: scale(1) !important;
+  background-color: red;
+  z-index: 2;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.next__card {
+  position: absolute;
+
+  transform: scale(0.9);
+  transform: translateX(100px);
+  z-index: 1;
+  opacity: 0.3;
+  user-select: none;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.sect--4 p {
+  color: var(--pg-clr);
+}
+
+.slide-prev,
+.slide-next {
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 900;
+  border: none;
+  background-color: var(--dark-4);
+  color: var(--pg-clr);
+  cursor: pointer;
+  z-index: 3;
+}
+
+.sect--5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sect--5 h1 {
+  font-size: 1.7em;
+  max-width: 400px;
+}
+
+.work__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.work__wrapper > div {
+  margin-top: 10px;
+  padding: 25px;
+  background-color: var(--dark-3);
+  border-radius: 20px;
+}
+
+.work__wrapper > div h3 {
+  margin: 6px 0;
+}
+
+.work__wrapper > div img {
+  width: 100%;
+  border-radius: 10px;
+
+  aspect-ratio: 1 / 0.5;
+  object-fit: cover;
+}
+
+.work__wrapper > div p {
+  color: var(--pg-clr);
+}
+
+.sect--7 {
+  background-image: url("./Low-Quality imgs/low-q-bg.jpg");
+  background-size: cover;
+  height: 80vh;
+}
+
+.sect--7 p {
+  color: var(--pg-clr);
+}
