@@ -232,18 +232,18 @@
   gap: 20px;
 }
 
-.work__wrapper > div {
+.work__wrapper > figure {
   margin-top: 10px;
   padding: 25px;
   background-color: var(--dark-3);
   border-radius: 20px;
 }
 
-.work__wrapper > div h3 {
+.work__wrapper > figure h3 {
   margin: 6px 0;
 }
 
-.work__wrapper > div img {
+.work__wrapper > figure img {
   width: 100%;
   border-radius: 10px;
 
@@ -251,7 +251,7 @@
   object-fit: cover;
 }
 
-.work__wrapper > div p {
+.work__wrapper > figure p {
   color: var(--pg-clr);
 }
 

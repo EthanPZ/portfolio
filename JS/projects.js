@@ -28,13 +28,13 @@ const projects = {
 
 for (let obj in projects) {
   const html = `
-    <div class="project">
+    <figure class="project">
     <img src="${projects[obj].img}" alt="project" />
     <a href="${projects[obj].link}" target="_blank"><h3>${projects[obj].name}</h3></a>
     <p>
       ${projects[obj].desc}
     </p>
-  </div>
+  </figure>
     `;
 
   projectContainer.insertAdjacentHTML("beforeend", html);

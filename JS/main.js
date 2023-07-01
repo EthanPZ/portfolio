@@ -6,25 +6,12 @@ const discordMsg = document.querySelector(".discord__clipboard");
 
 function grayOut(e, opacity) {
   const link = e.target;
+  // const check = link.closest(".wrap__resume");
 
-  if (!link.classList.contains("link")) return;
-
-  [...link.closest(".nav__links").children].forEach((l) => {
-    if (l !== link) {
-      l.style.opacity = opacity;
-    }
-  });
+  [...link.closest(".nav__links").children]
+    .slice(0, 3)
+    .forEach((l) => l !== link && (l.style.opacity = opacity));
 }
-
-navLinks.addEventListener("mouseover", (e) => grayOut(e, 0.5));
-navLinks.addEventListener("mouseout", (e) => grayOut(e, 1));
-
-navLinks.addEventListener("click", (e) => {
-  const link = e.target;
-  document.querySelector(link?.dataset?.scroll).scrollIntoView({
-    behavior: "smooth",
-  });
-});
 
 let setHidden;
 
@@ -39,3 +26,15 @@ function showMsg() {
 }
 
 discordIcon.addEventListener("click", showMsg);
+
+navLinks.addEventListener("mouseover", (e) => grayOut(e, 0.5));
+navLinks.addEventListener("mouseout", (e) => grayOut(e, 1));
+
+navLinks.addEventListener("click", (e) => {
+  const link = e.target;
+  link.dataset.scroll
+    ? document.querySelector(link.dataset.scroll).scrollIntoView({
+        behavior: "smooth",
+      })
+    : "";
+});
