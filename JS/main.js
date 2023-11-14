@@ -18,7 +18,7 @@ let setHidden;
 function showMsg() {
   clearTimeout(setHidden);
 
-  const discord = "EthanPZ#5880";
+  const discord = "EthanPZ";
   navigator.clipboard.writeText(discord);
 
   discordMsg.classList.remove("hidden");
