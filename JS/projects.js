@@ -18,12 +18,12 @@ const projects = {
     desc: "Map all your workouts easily!",
   },
 
-  // 3: {
-  //   img: "./Imgs/bankist-homepg.png",
-  //   name: "Bankist Landing",
-  //   link: "https://bankist-homepge.netlify.app/",
-  //   desc: "Beautiful landing page made using advanced dom techniques and methods.",
-  // },
+  3: {
+    img: "./Imgs/hofesh-il.png",
+    name: "HofeshIL",
+    link: "https://hofesh-il.netlify.app/",
+    desc: "Easily find out when there's a certain Israeli / Jewish holiday. (Currently only in Hebrew)",
+  },
 };
 
 for (let obj in projects) {
