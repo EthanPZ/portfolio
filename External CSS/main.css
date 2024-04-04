@@ -40,6 +40,10 @@ a {
   text-decoration: none;
 }
 
+p{
+  color: #aaa;
+}
+
 .hidden {
   visibility: hidden;
   transition: 1s ease-in-out;
