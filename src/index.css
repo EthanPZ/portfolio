@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+  body {
+    background-color: #000;
+    overflow-x: hidden;
+  }
+
+  img {
+    user-select: none;
+    pointer-events: none;
+  }
+
+  body::-webkit-scrollbar {
+    background-color: #111;
+    width: 12px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: #222;
+    border-radius: 999px;
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: #333;
+  }
+
+  .react-typewriter-text {
+    text-align: center !important;
+  }
+
+  .traffic-loader {
+    position: relative;
+    margin: auto;
+
+    width: 50px;
+    height: 50px;
+    --c: radial-gradient(farthest-side, #fff 92%, #0000);
+    background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
+      var(--c) 0 50%;
+    background-size: 10px 10px;
+    background-repeat: no-repeat;
+    animation: s8 1s infinite;
+  }
+
+  .traffic-loader::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: 3px;
+    background: repeating-conic-gradient(#0000 0 35deg, #fff 0 90deg);
+    -webkit-mask: radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 3px),
+      #000 0
+    );
+    border-radius: 50%;
+  }
+
+  @keyframes s8 {
+    100% {
+      transform: rotate(0.5turn);
+    }
+  }
+}
